@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/almostBlack"
+        tools:context=".MainActivity">
+
+
+    <TableLayout
+            android:id="@+id/Output"
+            android:layout_width="407dp"
+            android:layout_height="210dp"
+
+            tools:layout_editor_absoluteY="408dp"
+            tools:layout_editor_absoluteX="1dp"
+            app:layout_constraintBottom_toTopOf="@id/clear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Input">
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/simple_interest"
+                    android:textColor="@color/green"
+                    android:textSize="20sp" />
+
+            <EditText
+                    android:id="@+id/SI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:hint="@string/simple_interest"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+        </TableRow>
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/compound_interest"
+                    android:textColor="@color/green"
+                    android:textSize="20sp" />
+
+            <EditText
+                    android:id="@+id/CI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:hint="@string/compound_interest"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+        </TableRow>
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/si_r"
+                    android:textColor="@color/green"
+                    android:textSize="20sp" />
+
+            <EditText
+                    android:id="@+id/per"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:hint="@string/si_r"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+        </TableRow>
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/cagr_r"
+                    android:textColor="@color/green"
+                    android:textSize="20sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                    android:id="@+id/CAGR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:hint="@string/cagr_r"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:labelFor="@id/textView17"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+            android:id="@+id/Input"
+            android:layout_width="408dp"
+            android:layout_height="292dp"
+            android:shrinkColumns="2"
+            app:barrierMargin="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/Output"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/principal"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp" />
+
+            <EditText
+                    android:id="@+id/princi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:textAlignment="textEnd"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="23dp">
+
+            <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/interest_perannum"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp" />
+
+            <EditText
+                    android:id="@+id/rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:textAlignment="textEnd"
+                    tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/time_yrs"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp" />
+
+            <EditText
+                    android:id="@+id/tenure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:textAlignment="textEnd"
+                    tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/n_coumpnd_per_year"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp" />
+
+            <EditText
+                    android:id="@+id/n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:textAlignment="textEnd"
+                    tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="23dp">
+
+            <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:text="@string/future_value"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp" />
+
+            <EditText
+                    android:id="@+id/F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="23dp">
+
+            <Button
+                    android:id="@+id/calculate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+
+                    android:backgroundTint="@color/black"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="20dp"
+                    android:text="@string/calculate"
+                    android:textAlignment="center"
+                    android:textColor="@color/green"
+                    android:textSize="16sp" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+            android:id="@+id/clear"
+            android:layout_width="132dp"
+            android:layout_height="23dp"
+            android:layout_weight="1"
+
+            android:backgroundTint="@color/black"
+            android:paddingHorizontal="0dp"
+            android:paddingVertical="0dp"
+            android:text="@string/clear"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Output"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

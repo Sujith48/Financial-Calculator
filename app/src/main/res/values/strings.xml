@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FinancialCalculator</string>
+    <string name="principal">Principal</string>
+    <string name="time_yrs">Time(yrs)</string>
+    <string name="times_compounded">Times Compounded</string>
+    <string name="si_r">SI, r%</string>
+    <string name="future_value">Future Value</string>
+    <string name="calculate">Calculate</string>
+    <string name="interest_perannum">Interest(%perAnnum)</string>
+    <string name="simple_interest">SI</string>
+    <string name="compound_interest">CI</string>
+    <string name="cagr_r">CAGR, r%</string>
+    <string name="n_per_year">n (per year)</string>
+    <string name="n_coumpnd_per_year">n(Coumpnd. per year)</string>
+    <string name="clear">clear</string>
+</resources>
